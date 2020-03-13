@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "gerenciarPessoa": {
@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "gerenciarPessoa"
+    }
+  },
+  "defaultProject": "gerenciarPessoa",
+  "cli": {
+    "analytics": "9d5b5f5d-c377-477e-b70d-90743e13310a"
+  }
 }
