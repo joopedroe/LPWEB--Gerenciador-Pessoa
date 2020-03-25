@@ -1,23 +1,39 @@
 <h1>Gerenciador de Pessoa</h1>
-
+<body>
+  <div class="area">
 <form ngForm name="cadastro">
-    <div>
+    <div class="nome">
       <label>Nome: </label>
       <input type="text" name="nomePessoa" [(ngModel)]="nomePessoa">
     </div>
-    <div>
-      <label>Idade: </label>
-      <input type="text" name="idadePessoa" [(ngModel)]="idadePessoa">
+    <div class="idade">
+      <label>Idade :  </label>
+      <input type="text" class="inputIdade" name="idadePessoa" [(ngModel)]="idadePessoa">
+      <button (click)="adicionar()">OK</button>
     </div>
-  <button (click)="adicionar()">OK</button>
 </form>
 <h4>Lista de Pessoa</h4>
-<ul>
-  <li *ngFor="let pessoa of pessoas">
-    {{pessoa.nome}}  {{pessoa.idade}} 
-    <button (click)="excluir(pessoa.id)">Excluir</button>
-  </li>
-</ul>
+<div class="divTabela">
+<table class="tabela">
+  <thead>
+  <tr>
+  <th>Nome</th>
+  <th>Idade</th>
+  <th>Excluir</th>
+</tr>
+</thead>
+<tbody>
+  <tr *ngFor="let pessoa of pessoas">
+    <td>{{pessoa.nome}}</td>
+    <td>{{pessoa.idade}} </td>
+    <td><button (click)="excluir(pessoa.id)">X</button></td>
+    
+  </tr>
+</tbody>
+</table>
+</div>
 <p>Total de pessoas cadastradas {{pessoas.length}}</p>
 <p>Pessoa mais jovem: {{menorPessoa}}, com {{menorIdade}}</p>
 <p>Pessoa mais velha: {{maiorPessoa}}, com {{maiorIdade}}</p>
+</div>
+</body>

@@ -1,0 +1,34 @@
+table, th, td{
+    border: 1px solid black;
+    margin: auto  
+}
+table {
+    border-collapse: collapse;
+  }
+  td{
+      text-align:center;
+  }
+.area{
+    width:300px;
+    border-style: double;
+    align-self: center;
+    justify-content: center;   
+}
+.divTabela{
+    align-items: center
+}
+.nome{
+    align-content: center;
+    padding:3px;
+}
+.idade{
+    padding:3px;
+    
+}
+.inputIdade{
+    width:50px;
+    padding-right:10px;
+}
+h4,p{
+    text-align: center;
+}
